@@ -25,7 +25,7 @@ class _SplashScreenState extends State<SplashScreen> {
     return Scaffold(
       backgroundColor: Colors.green,
       body: Center(
-        child: widget.image != null
+        child: widget.image != ''
             ? Image.asset(widget.image)
             : CircularProgressIndicator(
                 color: Colors.white,
