@@ -17,7 +17,7 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     super.initState();
     Timer(
-        Duration(seconds: 3),
+        const Duration(seconds: 3),
         () => Navigator.of(context).pushReplacement(
             MaterialPageRoute(builder: (BuildContext context) => widget.home)));
   }
@@ -25,11 +25,11 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: widget.color != null ? widget.color : Colors.green,
+      backgroundColor: widget.color ?? Colors.green,
       body: Center(
         child: widget.image != ''
             ? Image.asset(widget.image)
-            : CircularProgressIndicator(
+            : const CircularProgressIndicator(
                 color: Colors.white,
               ),
       ),
